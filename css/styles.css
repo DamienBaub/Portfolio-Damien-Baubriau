@@ -1,0 +1,25 @@
+.logo {
+  width: 50px;
+  background-color: #11B7F4;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+}
+
+section.border-bottom {
+  border-bottom: 1px solid #ddd;
+}
+
+.banner p {
+  text-shadow: 1px 2px 40px #FAFAFA;
+}
