@@ -1,6 +1,7 @@
-// EmailJS with your public key
+// Initialize EmailJS
 (function () {
-  emailjs.init("LTOiQKuqMMtlg8pL8"); // Replace with your public key
+  // Get these values from your EmailJS dashboard
+  emailjs.init("LTOiQKuqMMtlg8pL8");
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // Show loading spinner
+      // Show loading state
       submitButton.disabled = true;
       loadingSpinner.classList.remove('d-none');
 
@@ -22,36 +23,27 @@ document.addEventListener('DOMContentLoaded', function () {
       successMessage.classList.add('d-none');
       errorMessage.classList.add('d-none');
 
-      // Prepare template parameters
-      const templateParams = {
-        from_name: form.name.value,
-        from_email: form.email.value,
-        message: form.message.value
-      };
-
-      // Send email using EmailJS
       emailjs.send(
-        'service_7j4th5c', // Replace with your EmailJS service ID
-        'template_qx1uh0h', // Replace with your EmailJS template ID
-        templateParams
+        "service_7j4th5c", // Get from EmailJS
+        "template_qx1uh0h", // Get from EmailJS
+        {
+          from_name: form.name.value,
+          from_email: form.email.value,
+          message: form.message.value
+        }
       )
-        .then(function () {
-          // Show success message
+        .then(() => {
           successMessage.classList.remove('d-none');
           form.reset();
-
-          // Hide success message after 5 seconds
           setTimeout(() => {
             successMessage.classList.add('d-none');
           }, 5000);
         })
-        .catch(function (error) {
-          // Show error message
-          errorMessage.classList.remove('d-none');
+        .catch((error) => {
           console.error('EmailJS Error:', error);
+          errorMessage.classList.remove('d-none');
         })
-        .finally(function () {
-          // Hide loading spinner and re-enable button
+        .finally(() => {
           submitButton.disabled = false;
           loadingSpinner.classList.add('d-none');
         });
