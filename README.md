@@ -3,7 +3,7 @@
 A modern, responsive portfolio website built with Bootstrap 5, showcasing my projects and skills as a web developer.
 
 ## 🌐 Live Demo
-Visit my portfolio: [https://damienbaub.github.io/portfolio-damien-baubriau/](https://damienbaub.github.io/portfolio-damien-baubriau/)
+Visit my portfolio: [https://damienbaub.github.io/portfolio-damien-baubriau/index.html](https://damienbaub.github.io/portfolio-damien-baubriau/index.html)
 
 ## ✨ Features
 
