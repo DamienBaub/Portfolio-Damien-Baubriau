@@ -1,10 +1,7 @@
-// Initialize EmailJS
-(function () {
-  // Get these values from your EmailJS dashboard
-  emailjs.init("LTOiQKuqMMtlg8pL8");
-})();
+window.onload = function () {
+  // Initialize EmailJS
+  emailjs.init(config.emailjs.publicKey);
 
-document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contactForm');
   const successMessage = document.getElementById('successMessage');
   const errorMessage = document.getElementById('errorMessage');
@@ -24,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
       errorMessage.classList.add('d-none');
 
       emailjs.send(
-        "service_7j4th5c", // Get from EmailJS
-        "template_qx1uh0h", // Get from EmailJS
+        config.emailjs.serviceId,
+        config.emailjs.templateId,
         {
           from_name: form.name.value,
           from_email: form.email.value,
@@ -49,4 +46,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
   }
-});
+};
