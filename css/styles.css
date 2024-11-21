@@ -45,3 +45,76 @@ section.border-bottom {
 .btn-media:hover {
   color: #1AA2ED !important;
 }
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+
+  /* Adjust header spacing */
+  header {
+    padding-top: 6rem !important;
+  }
+
+  /* Adjust text sizes */
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  /* Adjust section padding */
+  section {
+    padding: 3rem 0 !important;
+  }
+
+  /* Adjust container padding */
+  .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  /* Adjust form spacing */
+  .form-group {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Adjust button sizes */
+  .btn {
+    padding: 0.5rem 1.5rem !important;
+  }
+
+  /* Adjust image sizes */
+  .img-fluid {
+    max-width: 80% !important;
+    margin: 2rem auto !important;
+  }
+
+  /* Improve spacing in project cards */
+  .card {
+    margin-bottom: 2rem !important;
+  }
+
+  /* Adjust navigation menu */
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  /* Improve touch targets */
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+  }
+}
+
+/* Additional fixes for very small devices */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  .lead {
+    font-size: 1.1rem !important;
+  }
+}
