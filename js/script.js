@@ -1,42 +1,60 @@
+// Initialize EmailJS with your public key
+(function () {
+  emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your public key
+})();
+
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contactForm');
   const successMessage = document.getElementById('successMessage');
+  const errorMessage = document.getElementById('errorMessage');
+  const submitButton = document.getElementById('submitButton');
+  const loadingSpinner = document.getElementById('loadingSpinner');
 
   if (form) {
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault(); // Prevent default form submission
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-      try {
-        // Get form data
-        const formData = new FormData(form);
+      // Show loading spinner
+      submitButton.disabled = true;
+      loadingSpinner.classList.remove('d-none');
 
-        // Submit form using fetch
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
+      // Hide any existing messages
+      successMessage.classList.add('d-none');
+      errorMessage.classList.add('d-none');
 
-        // Show success message
-        if (successMessage) {
+      // Prepare template parameters
+      const templateParams = {
+        from_name: form.name.value,
+        from_email: form.email.value,
+        message: form.message.value
+      };
+
+      // Send email using EmailJS
+      emailjs.send(
+        'service_7j4th5c', // Replace with your EmailJS service ID
+        'template_qx1uh0h', // Replace with your EmailJS template ID
+        templateParams
+      )
+        .then(function () {
+          // Show success message
           successMessage.classList.remove('d-none');
-          successMessage.scrollIntoView({ behavior: 'smooth' });
-        }
+          form.reset();
 
-        // Reset form
-        form.reset();
-
-        // Hide message after 5 seconds
-        setTimeout(() => {
-          successMessage.classList.add('d-none');
-        }, 5000);
-
-      } catch (error) {
-        console.error('Error:', error);
-        alert('There was an error sending your message. Please try again.');
-      }
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            successMessage.classList.add('d-none');
+          }, 5000);
+        })
+        .catch(function (error) {
+          // Show error message
+          errorMessage.classList.remove('d-none');
+          console.error('EmailJS Error:', error);
+        })
+        .finally(function () {
+          // Hide loading spinner and re-enable button
+          submitButton.disabled = false;
+          loadingSpinner.classList.add('d-none');
+        });
     });
   }
 });
