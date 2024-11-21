@@ -173,7 +173,7 @@
               feel free to send me a message.</p>
           </div>
           <!-- Contact Form -->
-          <form action="https://formsubmit.co/Dam.baubriau@gmail.com" method="POST">
+          <form action="https://formsubmit.co/el/confirm/Dam.baubriau@gmail.com" method="POST">
             <div class="form-group mb-3">
               <label for="name" class="form-label">Your Name</label>
               <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
@@ -188,9 +188,10 @@
                 required></textarea>
             </div>
             <!-- Hidden inputs for FormSubmit configuration -->
-            <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
-            <input type="hidden" name="_captcha" value="true">
-            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://damienbaub.github.io/portfolio-bootstrap/">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_autoresponse" value="Thank you for your message! I'll get back to you soon.">
             <div class="text-center">
               <button type="submit" class="btn btn-primary">Send Message</button>
             </div>
