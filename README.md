@@ -1,57 +1,58 @@
-# Portfolio Website
+# Damien Baubriau - Web Developer Portfolio
 
-A modern, responsive portfolio website built with Bootstrap 5, showcasing my projects and skills as a web developer.
+A clean and modern portfolio website showcasing my journey from sales to web development, built with a focus on responsive design and user experience.
 
 ## 🌐 Live Demo
-Visit my portfolio: [https://damienbaub.github.io/portfolio-damien-baubriau/index.html](https://damienbaub.github.io/portfolio-damien-baubriau/index.html)
+[View Portfolio](https://damienbaub.github.io/Portfolio-Damien-Baubriau/)
 
-## ✨ Features
+## 👨‍💻 About Me
+I'm a web developer with a background in sales, passionate about creating beautiful, responsive websites. Currently focusing on mastering JavaScript and React, I bring a unique blend of technical skills and business acumen to my development projects.
 
-- **Responsive Design**: Fully responsive layout that works on all devices
-- **Modern UI**: Clean and professional design using Bootstrap 5
-<!-- - **Project Showcase**: Dedicated section highlighting my key projects -->
-- **Skills Section**: Visual representation of my technical skills
-- **Contact Form**: Interactive contact form powered by EmailJS
-- **Smooth Scrolling**: Enhanced user experience with smooth navigation
-<!-- - **Dark/Light Mode**: Toggle between dark and light themes -->
+## 🛠️ Technical Skills
 
-## 🛠️ Technologies Used
+### Languages & Frameworks
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
+- React
 
+### Core Competencies
+- Web Development
+- Responsive Design
+- Project Management
+- Communication
+- Critical Thinking
+- Data Analysis
+
+## 📱 Portfolio Features
+- Clean, modern UI design
+- Fully responsive layout
+- Interactive contact form
+- Social media integration
+- Skills visualization
+- Professional experience showcase
+
+## 🔧 Technologies Used
 - HTML5
 - CSS3
 - JavaScript
-- Bootstrap 5
+- Bootstrap
 - EmailJS
-- Git
 - GitHub Pages
 
-## 📱 Sections
+## 📞 Get in Touch
+I'm always interested in new opportunities and collaborations. Feel free to reach out!
 
-- **Home**: Welcome section with introduction
-- **About**: Personal background and professional journey
-<!-- - **Projects**: Showcase of my development work -->
-- **Skills**: Technical skills and competencies
-- **Contact**: Contact form for professional inquiries
+- 📧 Email: Dam.baubriau@gmail.com
+- 💼 LinkedIn: [Damien-Baubriau](https://www.linkedin.com/in/damien-baubriau/)
+- 🌐 GitHub: [DamienBaub](https://github.com/DamienBaub)
 
-## 📧 Contact Form
+## 🚀 Future Development
+Currently expanding my skillset with:
+- Advanced JavaScript
+- Beginner React.js
+- Full-stack development
 
-The contact form is implemented using EmailJS for reliable email delivery. Features include:
-- Real-time form validation
-- Success/error notifications
-- Spam protection
-- Mobile-responsive design
-
-## 🚀 Deployment
-
-This portfolio is deployed using GitHub Pages, making it easy to maintain and update.
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 📞 Contact
-
-Feel free to reach out to me:
-- Email: Dam.baubriau@gmail.com
-- LinkedIn: [Damien-Baubriau](https://www.linkedin.com/in/damien-baubriau/)
-- GitHub: [DamienBaub](https://github.com/DamienBaub)
+---
+*This portfolio is continuously evolving as I grow in my development journey.*
