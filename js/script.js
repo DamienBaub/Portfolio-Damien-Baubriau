@@ -1,17 +1,21 @@
-// Form Submit Success Message
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contactForm');
 
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  // Don't prevent form submission since we want FormSubmit to process it
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      // Show success message
+      const successMessage = document.getElementById('successMessage');
+      if (successMessage) {
+        successMessage.classList.remove('d-none');
 
-  // Show success message
-  const successMessage = document.getElementById('successMessage');
-  successMessage.classList.remove('d-none');
+        // Scroll to message
+        successMessage.scrollIntoView({ behavior: 'smooth' });
 
-  // Optionally scroll to the message
-  successMessage.scrollIntoView({ behavior: 'smooth' });
-
-  // Hide the message after 5 seconds
-  setTimeout(() => {
-    successMessage.classList.add('d-none');
-  }, 5000);
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          successMessage.classList.add('d-none');
+        }, 5000);
+      }
+    });
+  }
 });
