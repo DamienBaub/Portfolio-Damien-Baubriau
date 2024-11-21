@@ -1,7 +1,7 @@
 const config = {
   emailjs: {
-    publicKey: 'your_public_key_here',
-    serviceId: 'your_service_id_here',
-    templateId: 'your_template_id_here'
+    publicKey: 'LTOiQKuqMMtlg8pL8',
+    serviceId: 'service_7j4th5c',
+    templateId: 'template_qx1uh0h'
   }
 };
