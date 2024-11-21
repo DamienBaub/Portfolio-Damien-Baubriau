@@ -26,8 +26,22 @@ section.border-bottom {
   text-shadow: 1px 2px 40px #FAFAFA;
 }
 
-/* Button Custom Color */
+/* Button Custom Color (override btn-primary) */
 
 .btn-primary {
+  background-color: #0B62E3 !important;
+}
+
+.btn-primary:hover {
   background-color: #1AA2ED !important;
+}
+
+/* Social Media Custom Color */
+
+.btn-media {
+  color: #0B62E3 !important;
+}
+
+.btn-media:hover {
+  color: #1AA2ED !important;
 }
