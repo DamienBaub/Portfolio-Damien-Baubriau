@@ -26,8 +26,14 @@ section.border-bottom {
   text-shadow: 1px 2px 40px #FAFAFA;
 }
 
-/* Button */
+/* Button Custom Color */
 
 .btn-primary {
-  background-color: #189AEC !important;
+  background-color: #1AA2ED !important;
+}
+
+/* Font Awesome Custom Color */
+
+.fas {
+  color: #1AA2ED;
 }
