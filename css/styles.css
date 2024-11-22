@@ -52,3 +52,15 @@ section.border-bottom {
 .btn-media:hover {
   color: #1AA2ED !important;
 }
+
+/* Card Projects */
+
+.card {
+  transition: transform 0.2s;
+  /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge the card on hover */
+}
