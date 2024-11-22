@@ -1,4 +1,5 @@
 // Initialize EmailJS
+
 (function () {
   // Get these values from your EmailJS dashboard
   emailjs.init("LTOiQKuqMMtlg8pL8");
