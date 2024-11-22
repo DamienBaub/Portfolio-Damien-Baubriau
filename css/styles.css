@@ -36,6 +36,13 @@ section.border-bottom {
   background-color: #1AA2ED !important;
 }
 
+/* Skills and Languages */
+
+.icon-blue {
+  color: #0B62E3;
+  /* Set the icon color to #0B62E3 */
+}
+
 /* Social Media Custom Color */
 
 .btn-media {
