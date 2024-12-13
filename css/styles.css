@@ -82,3 +82,14 @@ section.border-bottom {
     /* Change to 1 card per row */
   }
 }
+
+@media (max-width: 991.98px) {
+
+  /* Adjust the breakpoint as needed */
+  .navbar-nav {
+    text-align: center;
+    /* Center text in collapsed state */
+    width: 100%;
+    /* Ensure full width */
+  }
+}
