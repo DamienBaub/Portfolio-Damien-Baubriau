@@ -51,3 +51,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+// navbar
+
+function collapseNavbar() {
+  const navbarCollapse = document.getElementById('navbarNav');
+  const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+    toggle: false
+  });
+  bsCollapse.hide(); // Hide the navbar
+}
