@@ -2,7 +2,7 @@
 
 (function () {
   // Get these values from your EmailJS dashboard
-  emailjs.init("hSnU3TYFiKaC6mSyLvi5H");
+  emailjs.init("HyFyqeX7C21b_AR2A");
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
