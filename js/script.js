@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
       errorMessage.classList.add('d-none');
 
       emailjs.send(
-        "service_wsdpfp5", // Get from EmailJS
+        "service_bw3om74", // Get from EmailJS
         "template_qx1uh0h", // Get from EmailJS
         {
           from_name: form.name.value,
