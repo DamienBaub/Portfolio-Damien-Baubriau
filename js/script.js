@@ -2,7 +2,7 @@
 
 (function () {
   // Get these values from your EmailJS dashboard
-  emailjs.init("LTOiQKuqMMtlg8pL8");
+  emailjs.init("hSnU3TYFiKaC6mSyLvi5H");
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
       errorMessage.classList.add('d-none');
 
       emailjs.send(
-        "service_97x67bf", // Get from EmailJS
+        "service_j158ra9", // Get from EmailJS
         "template_qx1uh0h", // Get from EmailJS
         {
           from_name: form.name.value,
