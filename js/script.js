@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch((error) => {
           console.error("EmailJS Error:", error);
+          errorMessage.textContent = "Failed to send email. Please try again.";
           errorMessage.classList.remove("d-none");
         })
         .finally(() => {
