@@ -24,15 +24,19 @@ document.addEventListener("DOMContentLoaded", function () {
       successMessage.classList.add("d-none");
       errorMessage.classList.add("d-none");
 
+      const emailData = {
+        from_name: form.name.value,
+        from_email: form.email.value,
+        message: form.message.value,
+      };
+
+      console.log("Sending email with data:", emailData); // Log the email data
+
       emailjs
         .send(
           "service_8zcgxde", // Get from EmailJS
           "template_qx1uh0h", // Get from EmailJS
-          {
-            from_name: form.name.value,
-            from_email: form.email.value,
-            message: form.message.value,
-          }
+          emailData
         )
         .then(() => {
           successMessage.classList.remove("d-none");
