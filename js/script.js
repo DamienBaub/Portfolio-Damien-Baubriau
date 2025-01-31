@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       emailjs
         .send(
-          "service_wzq2u7g", // Get from EmailJS
+          "service_8zcgxde", // Get from EmailJS
           "template_qx1uh0h", // Get from EmailJS
           {
             from_name: form.name.value,
