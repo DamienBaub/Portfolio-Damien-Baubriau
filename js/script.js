@@ -5,48 +5,49 @@
   emailjs.init("ps0bJNVUD53f0uiav");
 })();
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contactForm');
-  const successMessage = document.getElementById('successMessage');
-  const errorMessage = document.getElementById('errorMessage');
-  const submitButton = document.getElementById('submitButton');
-  const loadingSpinner = document.getElementById('loadingSpinner');
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const successMessage = document.getElementById("successMessage");
+  const errorMessage = document.getElementById("errorMessage");
+  const submitButton = document.getElementById("submitButton");
+  const loadingSpinner = document.getElementById("loadingSpinner");
 
   if (form) {
-    form.addEventListener('submit', function (e) {
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
 
       // Show loading state
       submitButton.disabled = true;
-      loadingSpinner.classList.remove('d-none');
+      loadingSpinner.classList.remove("d-none");
 
       // Hide any existing messages
-      successMessage.classList.add('d-none');
-      errorMessage.classList.add('d-none');
+      successMessage.classList.add("d-none");
+      errorMessage.classList.add("d-none");
 
-      emailjs.send(
-        "service_7j4th5c", // Get from EmailJS
-        "template_qx1uh0h", // Get from EmailJS
-        {
-          from_name: form.name.value,
-          from_email: form.email.value,
-          message: form.message.value
-        }
-      )
+      emailjs
+        .send(
+          "service_8zcgxde", // Get from EmailJS
+          "template_qx1uh0h", // Get from EmailJS
+          {
+            from_name: form.name.value,
+            from_email: form.email.value,
+            message: form.message.value,
+          }
+        )
         .then(() => {
-          successMessage.classList.remove('d-none');
+          successMessage.classList.remove("d-none");
           form.reset();
           setTimeout(() => {
-            successMessage.classList.add('d-none');
+            successMessage.classList.add("d-none");
           }, 5000);
         })
         .catch((error) => {
-          console.error('EmailJS Error:', error);
-          errorMessage.classList.remove('d-none');
+          console.error("EmailJS Error:", error);
+          errorMessage.classList.remove("d-none");
         })
         .finally(() => {
           submitButton.disabled = false;
-          loadingSpinner.classList.add('d-none');
+          loadingSpinner.classList.add("d-none");
         });
     });
   }
@@ -55,9 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // navbar
 
 function collapseNavbar() {
-  const navbarCollapse = document.getElementById('navbarNav');
+  const navbarCollapse = document.getElementById("navbarNav");
   const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-    toggle: false
+    toggle: false,
   });
   bsCollapse.hide(); // Hide the navbar
 }
