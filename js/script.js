@@ -24,19 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
       successMessage.classList.add("d-none");
       errorMessage.classList.add("d-none");
 
-      const emailData = {
-        from_name: form.name.value,
-        from_email: form.email.value,
-        message: form.message.value,
-      };
-
-      console.log("Sending email with data:", emailData); // Log the email data
-
       emailjs
         .send(
-          "service_8zcgxde", // Get from EmailJS
+          "service_7j4th5c", // Get from EmailJS
           "template_qx1uh0h", // Get from EmailJS
-          emailData
+          {
+            from_name: form.name.value,
+            from_email: form.email.value,
+            message: form.message.value,
+          }
         )
         .then(() => {
           successMessage.classList.remove("d-none");
@@ -47,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch((error) => {
           console.error("EmailJS Error:", error);
-          errorMessage.textContent = "Failed to send email. Please try again.";
           errorMessage.classList.remove("d-none");
         })
         .finally(() => {
